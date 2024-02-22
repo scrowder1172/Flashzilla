@@ -16,6 +16,8 @@ extension View {
 
 struct ContentView: View {
     
+    @Environment(\.accessibilityDifferentiateWithoutColor) private var accessibilityDifferentiateWithoutColor
+    
     @State private var cards: [Card] = Array<Card>(repeating: .example, count: 10)
     @State private var cards2: [Card] = [Card](repeating: .example, count: 10)
     
@@ -40,6 +42,27 @@ struct ContentView: View {
                         }
                         .stacked(at: cardIndex, in: cards.count)
                     }
+                }
+            }
+            
+            if accessibilityDifferentiateWithoutColor {
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        Image(systemName: "xmark.circle")
+                            .padding()
+                            .background(.black.opacity(0.7))
+                            .clipShape(.circle)
+                        Spacer()
+                        Image(systemName: "checkmark.circle")
+                            .padding()
+                            .background(.black.opacity(0.7))
+                            .clipShape(.circle)
+                    }
+                    .foregroundStyle(.white)
+                    .font(.largeTitle)
+                    .padding()
                 }
             }
         }

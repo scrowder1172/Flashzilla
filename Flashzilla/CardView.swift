@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     
+    @Environment(\.accessibilityDifferentiateWithoutColor) private var accessibilityDifferentiateWithoutColor
+    
     let card: Card
     var removal: (() -> Void)? = nil
     
@@ -18,7 +20,16 @@ struct CardView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(.white)
+                .fill(
+                    accessibilityDifferentiateWithoutColor ?
+                        .white : .white.opacity(1 - Double(abs(offset.width / 50)))
+                )
+                .background(
+                    accessibilityDifferentiateWithoutColor 
+                    ? nil :
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(offset.width > 0 ? .green : .red)
+                )
                 .shadow(radius: 10)
             
             VStack {
