@@ -13,6 +13,7 @@
 		52BCF0822B8797FF006A59DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BCF0812B8797FF006A59DD /* Preview Assets.xcassets */; };
 		52BCF0892B879894006A59DD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BCF0882B879894006A59DD /* Launch Screen.storyboard */; };
 		52BCF08C2B87A0F9006A59DD /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF08B2B87A0F9006A59DD /* GesturesView.swift */; };
+		52BCF08E2B87D5D5006A59DD /* AllowsHitTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF08D2B87D5D5006A59DD /* AllowsHitTestingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		52BCF0812B8797FF006A59DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52BCF0882B879894006A59DD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		52BCF08B2B87A0F9006A59DD /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
+		52BCF08D2B87D5D5006A59DD /* AllowsHitTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowsHitTestingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				52BCF08B2B87A0F9006A59DD /* GesturesView.swift */,
+				52BCF08D2B87D5D5006A59DD /* AllowsHitTestingView.swift */,
 			);
 			path = "Tutorial Files";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BCF08C2B87A0F9006A59DD /* GesturesView.swift in Sources */,
+				52BCF08E2B87D5D5006A59DD /* AllowsHitTestingView.swift in Sources */,
 				52BCF07D2B8797FE006A59DD /* ContentView.swift in Sources */,
 				52BCF07B2B8797FE006A59DD /* FlashzillaApp.swift in Sources */,
 			);
