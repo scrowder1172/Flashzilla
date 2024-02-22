@@ -15,6 +15,7 @@
 		52BCF08C2B87A0F9006A59DD /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF08B2B87A0F9006A59DD /* GesturesView.swift */; };
 		52BCF08E2B87D5D5006A59DD /* AllowsHitTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF08D2B87D5D5006A59DD /* AllowsHitTestingView.swift */; };
 		52BCF0902B87DB69006A59DD /* TimerTestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF08F2B87DB69006A59DD /* TimerTestingView.swift */; };
+		52BCF0922B87E521006A59DD /* DetectBackgroundAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF0912B87E521006A59DD /* DetectBackgroundAppView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		52BCF08B2B87A0F9006A59DD /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		52BCF08D2B87D5D5006A59DD /* AllowsHitTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowsHitTestingView.swift; sourceTree = "<group>"; };
 		52BCF08F2B87DB69006A59DD /* TimerTestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTestingView.swift; sourceTree = "<group>"; };
+		52BCF0912B87E521006A59DD /* DetectBackgroundAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectBackgroundAppView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				52BCF08B2B87A0F9006A59DD /* GesturesView.swift */,
 				52BCF08D2B87D5D5006A59DD /* AllowsHitTestingView.swift */,
 				52BCF08F2B87DB69006A59DD /* TimerTestingView.swift */,
+				52BCF0912B87E521006A59DD /* DetectBackgroundAppView.swift */,
 			);
 			path = "Tutorial Files";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				52BCF08C2B87A0F9006A59DD /* GesturesView.swift in Sources */,
 				52BCF08E2B87D5D5006A59DD /* AllowsHitTestingView.swift in Sources */,
 				52BCF07D2B8797FE006A59DD /* ContentView.swift in Sources */,
+				52BCF0922B87E521006A59DD /* DetectBackgroundAppView.swift in Sources */,
 				52BCF0902B87DB69006A59DD /* TimerTestingView.swift in Sources */,
 				52BCF07B2B8797FE006A59DD /* FlashzillaApp.swift in Sources */,
 			);
