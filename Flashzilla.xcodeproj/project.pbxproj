@@ -12,6 +12,7 @@
 		52BCF07F2B8797FF006A59DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BCF07E2B8797FF006A59DD /* Assets.xcassets */; };
 		52BCF0822B8797FF006A59DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BCF0812B8797FF006A59DD /* Preview Assets.xcassets */; };
 		52BCF0892B879894006A59DD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BCF0882B879894006A59DD /* Launch Screen.storyboard */; };
+		52BCF08C2B87A0F9006A59DD /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BCF08B2B87A0F9006A59DD /* GesturesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		52BCF07E2B8797FF006A59DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52BCF0812B8797FF006A59DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52BCF0882B879894006A59DD /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		52BCF08B2B87A0F9006A59DD /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				52BCF07A2B8797FE006A59DD /* FlashzillaApp.swift */,
 				52BCF07C2B8797FE006A59DD /* ContentView.swift */,
+				52BCF08A2B87A0E4006A59DD /* Tutorial Files */,
 				52BCF07E2B8797FF006A59DD /* Assets.xcassets */,
 				52BCF0882B879894006A59DD /* Launch Screen.storyboard */,
 				52BCF0802B8797FF006A59DD /* Preview Content */,
@@ -68,6 +71,14 @@
 				52BCF0812B8797FF006A59DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52BCF08A2B87A0E4006A59DD /* Tutorial Files */ = {
+			isa = PBXGroup;
+			children = (
+				52BCF08B2B87A0F9006A59DD /* GesturesView.swift */,
+			);
+			path = "Tutorial Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BCF08C2B87A0F9006A59DD /* GesturesView.swift in Sources */,
 				52BCF07D2B8797FE006A59DD /* ContentView.swift in Sources */,
 				52BCF07B2B8797FE006A59DD /* FlashzillaApp.swift in Sources */,
 			);
