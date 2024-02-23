@@ -17,21 +17,28 @@ extension View {
 struct ContentView: View {
     
     @Environment(\.accessibilityDifferentiateWithoutColor) private var accessibilityDifferentiateWithoutColor
+    @Environment(\.scenePhase) private var scenePhase
     
     @State private var cards: [Card] = Array<Card>(repeating: .example, count: 10)
     @State private var cards2: [Card] = [Card](repeating: .example, count: 10)
+    
+    @State private var timeRemaining: Int = 100
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
+    @State private var isActive: Bool = true
     
     var body: some View {
         ZStack {
             Image(.appBackground)
             
             VStack {
-                Text("Timer Placeholder")
-                    .padding(.vertical, 5)
-                    .padding(.horizontal, 10)
-                    .background(.black)
-                    .font(.headline)
+                Text("Time: \(timeRemaining)")
+                    .font(.largeTitle)
                     .foregroundStyle(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 5)
+                    .background(.black.opacity(0.75))
+                    .clipShape(.capsule)
                 
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { cardIndex in
@@ -42,6 +49,15 @@ struct ContentView: View {
                         }
                         .stacked(at: cardIndex, in: cards.count)
                     }
+                }
+                .allowsHitTesting(timeRemaining > 0)
+                
+                if cards.isEmpty {
+                    Button("Start Again", action: resetCards)
+                        .padding()
+                        .background(.white)
+                        .foregroundStyle(.black)
+                        .clipShape(.capsule)
                 }
             }
             
@@ -66,10 +82,36 @@ struct ContentView: View {
                 }
             }
         }
+        .onReceive(timer) { time in
+            guard isActive else { return }
+            
+            if timeRemaining > 0 {
+                timeRemaining -= 1
+            }
+        }
+        .onChange(of: scenePhase) {
+            if scenePhase == .active {
+                if cards.isEmpty == false {
+                    isActive = true
+                }
+            } else {
+                isActive = false
+            }
+        }
     }
     
     func removeCard(at index: Int) {
         cards.remove(at: index)
+        
+        if cards.isEmpty {
+            isActive = false
+        }
+    }
+    
+    func resetCards() {
+        cards = Array<Card>(repeating: .example, count: 10)
+        timeRemaining = 100
+        isActive = true
     }
 }
 
