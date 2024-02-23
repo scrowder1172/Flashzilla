@@ -20,7 +20,7 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
                 .fill(
                     accessibilityDifferentiateWithoutColor ?
                         .white : .white.opacity(1 - Double(abs(offset.width / 50)))
